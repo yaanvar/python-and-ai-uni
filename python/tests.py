@@ -1,28 +1,44 @@
-stri=str(input("Введите строку, состоящую из 0 и 1. Длина не должна превышать 1 000 000 символов: "))
+def x_2(x):
+    match x[2]:
+        case 1979:
+            match x[3]:
+                case 'XSLT':
+                    match x[0]:
+                        case 'ASP':
+                            return 0
+                        case 'P4':
+                            return 1
+                        case 'ABAP':
+                            return 2
+                case 'SASS':
+                    match x[1]:
+                        case 1987:
+                            return 3
+                        case 1993:
+                            return 4
+                case 'COOL':
+                    return 5
+        case 1988:
+            match x[0]:
+                case 'ASP':
+                    match x[1]:
+                        case 1987:
+                            return 6
+                        case 1993:
+                            return 7
+                case 'P4':
+                    return 8
+                case 'ABAP':
+                    return 9
+        case 2005:
+            return 10
+        case _:
+            return
 
-    
- 
-str1 = '1'
-str0 = '0'
-step = len(str1)
-for i in range(len(stri) - step + 1):
-    if str1 != stri[i : i + step]:
-        if str0 != stri[i : i + step]:
-            print("Введены символы, не равные 0 и 1")
-            quit()
-        
-    
-    
-def press(stri):
-    blocks=[]
-    tmp=''
-    for a in stri:
-        tmp=tmp+a
-        if not tmp in blocks:
-            blocks.append(tmp)
-            tmp=''
- 
-    blocks.append(tmp)        
-    return blocks
-      
-print(press(stri))
+
+def main(x):
+    res = x_2(x)
+    print(res)
+
+
+main(['ASP', 1987, 1979, 'COOL'])
